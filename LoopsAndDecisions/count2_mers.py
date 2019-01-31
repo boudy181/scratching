@@ -9,7 +9,7 @@ line = ' '
 # while line is not empty
 kmer_length = 6
 kmer_dictionary = {}
-out = open("aip_kmers.txt", 'w')
+out = open("aip2_kmers.txt", 'w')
 while line:
     # Read one line from the file using the readline() method
     line = read_Aip02.readline()
@@ -21,10 +21,10 @@ while line:
                   kmer_dictionary[kmer]+=1
             else:
                   kmer_dictionary[kmer]=1
-        t = "\t"
-        for kmer in kmer_dictionary:
-            count = kmer_dictionary[kmer]
-            output = [kmer, str(count)]
-            out.write((t.join(output)))
+t = "\t"
+for kmer in kmer_dictionary:
+    count = kmer_dictionary[kmer]
+    output = [kmer, str(count)]
+    out.write((t.join(output)))
 # Close the file using the close() method
 read_Aip02.close()
